@@ -97,7 +97,7 @@
 				let result = await uni.$http.get('/api/public/v1/home/floordata');
 				if(result.statusCode === 200){
 					// 改造数据
-					console.log(result.data.message);
+					// console.log(result.data.message);
 					result.data.message.forEach((floor)=>{
 						floor.product_list.forEach((prod)=>{
 							prod.url = '/subpkg/goods-list/goods-list?'+prod.navigator_url.split('?')[1];
