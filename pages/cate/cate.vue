@@ -58,7 +58,7 @@
 			async getNavList() {
 				const result = await uni.$http.get('/api/public/v1/categories')
 				if (result.statusCode === 200) {
-					console.log('nav',result)
+					// console.log('nav',result)
 					this.navList = result.data.message;
 					// 分类页加载默认显示第一个分类，所以此处将第一个一级分类的children赋值给二级分类，后续动态改变即可
 					this.nav2List = result.data.message[0].children

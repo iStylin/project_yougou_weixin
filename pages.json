@@ -40,30 +40,27 @@
 			"pages": [
 				{
                     "path" : "goods-detail/goods-detail",
-                    "style" :                                                                                    
-                {
-                    "navigationBarTitleText": "",
-                    "enablePullDownRefresh": false
-                }
-                
+                    "style" :{
+						"navigationBarTitleText": "",
+						"enablePullDownRefresh": false
+					}
                 }
                 ,{
                     "path" : "goods-list/goods-list",
-                    "style" :                                                                                    
-                {
-                    "navigationBarTitleText": "",
-                    "enablePullDownRefresh": false
-                }
+                    "style" :{
+						"navigationBarTitleText": "",
+						"onReachBottomDistance": 100,
+						"enablePullDownRefresh": true,
+						"backgroundColor": "#F8F8F8"
+					}
                 
                 }
                 ,{
                     "path" : "my-search/my-search",
-                    "style" :                                                                                    
-                {
-                    "navigationBarTitleText": "",
-                    "enablePullDownRefresh": false
-                }
-                
+                    "style" :{
+						"navigationBarTitleText": "",
+						"enablePullDownRefresh": false
+					}
                 }
             ]
 		}
