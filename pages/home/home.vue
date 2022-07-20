@@ -1,5 +1,9 @@
 <template>
 	<view>
+		<!-- 搜索框区 -->
+		<view class="searchContainer">
+			<search @click='toSearch'></search>
+		</view>
 		<!-- 轮播图区 -->
 		<swiper :indicator-dots="true" :autoplay="true" :interval="3000" :duration="1000" :circular="true">
 			<swiper-item v-for="(item,index) in swiperList" :key="index" @click="toGoodsDetail(item.goods_id)">
@@ -107,6 +111,12 @@
 				}else{
 					uni.$showMsg();
 				}
+			},
+			// 点击搜索框跳转到搜索页面
+			toSearch(){
+				uni.navigateTo({
+					url:'/subpkg/my-search/my-search'
+				})
 			}
 			
 		}
@@ -121,6 +131,12 @@ swiper{
 		width: 100%;
 		height: 100%;
 	}
+}
+.searchContainer{
+	// 设置搜索框吸顶效果
+	position: sticky;
+	top: 0;
+	z-index: 99999;
 }
 .navContainer{
 	display: flex;

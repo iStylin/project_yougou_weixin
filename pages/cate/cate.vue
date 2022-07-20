@@ -1,5 +1,7 @@
 <template>
 	<view>
+		<search @click='toSearch'></search>
+
 		<view class="scroll-view-container">
 			<!-- 左侧纵向导航 -->
 			<scroll-view class="scroll-view-left" scroll-y="true" :style="{height:wh+'px'}">
@@ -45,7 +47,8 @@
 			// 获取设备信息
 			const sysInfo = uni.getSystemInfoSync();
 			// 保存设备可用高度（屏幕高度减去底部tabbar和顶部navigator之后的）
-			this.wh = sysInfo.windowHeight;
+			// 50时搜索框的高度
+			this.wh = sysInfo.windowHeight - 50;
 
 			//获取nav数据
 			this.getNavList();
@@ -76,6 +79,12 @@
 			gotoGoodList(nav3){
 				uni.navigateTo({
 					url:'/subpkg/goods-list/goods-list?cid='+nav3.cat_id,
+				})
+			},
+			//点击搜索框，跳转到搜索页面
+			toSearch(){
+				uni.navigateTo({
+					url:'/subpkg/my-search/my-search'
 				})
 			}
 		}
