@@ -27,9 +27,12 @@ uni.$showMsg = function(title="请求数据失败",duration=1500){
 
 // #ifndef VUE3
 import Vue from 'vue'
+import store from '@/store/store.js'
+
 Vue.config.productionTip = false
 App.mpType = 'app'
 const app = new Vue({
+	store:store,
     ...App
 })
 app.$mount()

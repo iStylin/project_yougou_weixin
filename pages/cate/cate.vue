@@ -28,6 +28,7 @@
 </template>
 
 <script>
+	import badgeMix from '@/mixins/tabbar-badge.js'
 	export default {
 		data() {
 			return {
@@ -43,6 +44,7 @@
 				scrollTop:0
 			};
 		},
+		mixins:[badgeMix],
 		onLoad() {
 			// 获取设备信息
 			const sysInfo = uni.getSystemInfoSync();
@@ -52,6 +54,9 @@
 
 			//获取nav数据
 			this.getNavList();
+			
+			// 调用mixins中设置购物车徽标的方法
+			this.setBadge()
 		},
 		methods: {
 			// 获取左侧导航栏数据
