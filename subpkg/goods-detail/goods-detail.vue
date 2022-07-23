@@ -124,7 +124,6 @@
 						goods_name,
 						goods_price,
 						goods_small_logo,
-						goods_state
 					} = this.goodsInfo
 					// 整理商品信息
 					// { goods_id, goods_name, goods_price, goods_count, goods_small_logo, goods_state }
@@ -134,7 +133,7 @@
 						goods_price,
 						goods_count: 1,
 						goods_small_logo,
-						goods_state
+						goods_state:true
 					}
 					//
 					this.ADDTOCART(goodInfo)

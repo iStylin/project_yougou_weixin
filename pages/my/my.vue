@@ -13,10 +13,6 @@
 			};
 		},
 		mixins:[badgeMix],
-		onLoad() {
-			// 调用mixins中设置购物车徽标的方法
-			this.setBadge()
-		}
 	}
 </script>
 

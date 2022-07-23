@@ -54,9 +54,6 @@
 
 			//获取nav数据
 			this.getNavList();
-			
-			// 调用mixins中设置购物车徽标的方法
-			this.setBadge()
 		},
 		methods: {
 			// 获取左侧导航栏数据

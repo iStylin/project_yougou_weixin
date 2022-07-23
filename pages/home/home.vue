@@ -62,8 +62,6 @@
 			this.getNavList();
 			// 获取楼层数据
 			this.getFloorList();
-			// 调用mixins中设置购物车徽标的方法
-			this.setBadge()
 		},
 		methods:{
 			// 获取轮播图数据的接口函数
