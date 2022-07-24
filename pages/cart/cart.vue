@@ -62,7 +62,9 @@
 			};
 		},
 		mixins:[badgeMix],
-
+		onLoad() {
+			this.setBadge()
+		},
 		computed:{
 			// 购物车中商品总数量
 			...mapGetters('m_cart',['total']),
